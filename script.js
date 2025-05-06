@@ -21,11 +21,13 @@ window.addEventListener('load', () => {
     removeButton.setAttribute('class', 'removeButton');
     editButton.setAttribute('class', 'editButton');
 
+    /*
     let editBox = document.createElement('input');
     editBox.type = 'text';
     editBox.style.display = 'none';
     editBox.value = li.innerHTML;
     editBox.textContent = li.innerHTML
+    */
 
     // this was tricky, spent over an hour working towards this one line
     // assigns click event listener to each new remove button
@@ -36,7 +38,7 @@ window.addEventListener('load', () => {
     li.appendChild(itemText);
     li.appendChild(editButton);
     li.appendChild(removeButton);
-    li.appendChild(editBox);
+    //li.appendChild(editBox);
     cartListElement.appendChild(li);
 
     // resets input field to an empty string
@@ -52,6 +54,7 @@ window.addEventListener('load', () => {
     selectedItemToRemove.remove();
   }
 
+  /*
   function editListItem(li, editBox) {
 
     // Replace text span with input
@@ -69,6 +72,7 @@ window.addEventListener('load', () => {
       editButton.textContent = 'Edit';
     };
   }
+    */
 
   // Event Listeners
   addButtonElement.addEventListener('click', addListItem);
